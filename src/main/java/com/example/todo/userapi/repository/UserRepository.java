@@ -17,4 +17,5 @@ public interface UserRepository extends JpaRepository<User, String> {
 //    @Query("select count(*) from User u where u.email=:email")
     boolean existsByEmail(String email); // existsBy~ 면 위의 jpql이 자동으로 사용됨
 
+
 }
