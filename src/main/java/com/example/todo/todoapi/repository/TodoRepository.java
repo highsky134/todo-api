@@ -15,4 +15,9 @@ public interface TodoRepository extends JpaRepository<Todo, String> {
     @Query("SELECT t FROM Todo t WHERE t.user = :zzz")
     List<Todo> findAllByUser(@Param("zzz") User user); // Page<Todo>
 
+    // 회원이 작성한 일정의 개수를 리턴
+    @Query("SELECT COUNT(*) FROM Todo t WHERE t.user=:user")
+    int countByUser(@Param("user") User user);
+
+
 }
