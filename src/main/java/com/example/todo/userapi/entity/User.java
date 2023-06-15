@@ -41,7 +41,7 @@ public class User {
     @Builder.Default
     private Role role = Role.COMMON; // 유저 권한
 
-
+    private String profileImg;
 
     // setter를 지우고 해당 변경사항에 맞는 메서드 생성(setter 대체)
 
